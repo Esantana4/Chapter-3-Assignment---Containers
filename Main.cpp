@@ -15,9 +15,9 @@
  Otoniel Torres Bernal & Thanh Tran - 
  */
 
-#include <iomanip>
 #include "input.h"
 #include <iostream>
+#include "TicTacToe.h"
 
 using namespace std;
 
@@ -35,8 +35,10 @@ int main()
 // Post-Condition: no return. Main menu
 void mainMenu()
 {
+    
+    TicTacToe ticTacToeObject;
 
-    // Main Menu
+
 
     cout << endl;
     cout << "\tCMPR131 - Chapter 3 Containers Assignment by Erik Santana (9 / 16 / 23)";
@@ -57,7 +59,7 @@ void mainMenu()
         switch (option)
         {
         case 0: exit(1); break;
-        case 1: system("cls"); break;
+        case 1: system("cls"); ticTacToeObject.ticTacToe(); break;
         case 2: system("cls"); break;
         case 3: system("cls"); break;
 
