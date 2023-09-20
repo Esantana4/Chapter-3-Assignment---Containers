@@ -3,6 +3,8 @@
 #include <iomanip>
 #include <chrono>
 
+// Credit: Joe Bryant & Erik Santana - TicTacToe
+
 static const int ROW_SIZE = 3;
 static const int COL_SIZE = 3;
 

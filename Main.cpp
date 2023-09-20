@@ -10,7 +10,7 @@
  Part 3: 
 
  Credit:
- Joe Bryant & Erik Santana - 
+ Joe Bryant & Erik Santana - Tic Tac Toe
  Saul Merino & John Kim - 
  Otoniel Torres Bernal & Thanh Tran - 
  */

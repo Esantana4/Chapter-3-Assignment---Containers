@@ -1,5 +1,7 @@
 #include "TicTacToe.h"
 
+// Credit: Joe Bryant & Erik Santana - TicTacToe
+
 // Pre-Condition: no parameters
 // Post-Condition: no return. Initializer Constructor.
 TicTacToe::TicTacToe()
