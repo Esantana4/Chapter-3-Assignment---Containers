@@ -5,14 +5,14 @@
 
  Description:
 
- Part 1:
- Part 2:
- Part 3: 
+ Part 1: Tic Tac Toe
+ Part 2: Tower Of Hanoi
+ Part 3: n-Queens
 
  Credit:
- Joe Bryant & Erik Santana - Tic Tac Toe
- Saul Merino & John Kim - 
- Otoniel Torres Bernal & Thanh Tran - 
+ Joe Bryant & Erik Santana: Tic Tac Toe
+ Saul Merino & John Kim & Christian Hernandez: Tower Of Hanoi
+ Otoniel Torres Bernal & Thanh Tran: n-Queens
  */
 
 #include "input.h"

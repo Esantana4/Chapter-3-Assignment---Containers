@@ -5,6 +5,8 @@
 #include <string>
 #include <iomanip>
 
+// Credit: Otoniel Torres Bernal& Thanh Tran: n - Queens
+
 int inputInteger(std::string prompt, int start, bool greater);
 char inputChar(std::string prompt, std::string options);
 char inputChar(std::string prompt, char yes, char no);

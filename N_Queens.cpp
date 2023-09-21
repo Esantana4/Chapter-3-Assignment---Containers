@@ -1,5 +1,7 @@
 #include "N_Queens.h"
 
+// Credit: Otoniel Torres Bernal& Thanh Tran: n - Queens
+
 //************************************** Constructor **********************************//
 
 // Arg-constructor

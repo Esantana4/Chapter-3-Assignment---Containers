@@ -1,13 +1,13 @@
 #include "Tower.h"
 
+// Credit: Saul Merino& John Kim& Christian Hernandez - Tower Of Hanoi
+
 // Pre-Condition: no parameters.
 // Post-Condition: no return. Game start
 void Tower::tower()
 {
 	clock_t start_time;
 	clock_t	end_time;
-
-	// INT_MAX(2147483647)
 
 	for (int i = 1; i <= max_discs; ++i)
 	{
@@ -303,6 +303,8 @@ void Tower::tower()
 		cout << "\t\tThe slowest time was " << slow_time[discs_overall_used] << " seconds in " << slowest_moves_each_game[discs_overall_used] << " moves.\n";
 		cout << "\t\tThe average time was " << average_seconds << " second(s)\n";
 	}
+
+	system("pause");
 }
 
 // Pre-Condition: parameters: const vector<int>& A_Peg, const vector<int>& B_Peg, const vector<int>& C_Peg

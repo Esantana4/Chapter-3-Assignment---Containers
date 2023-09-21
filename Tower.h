@@ -6,6 +6,8 @@
 #include <map>
 #include <string>
 
+// Credit: Saul Merino& John Kim& Christian Hernandez - Tower Of Hanoi
+
 using namespace std;
 
 int inputInteger(string prompt, int start, bool greater);
@@ -15,16 +17,14 @@ char inputChar(string prompt, char yes, char no);
 class Tower
 {
 private:
-	char option;
-
-	int rings;
-	int moves;
+	char option = 0;
+	int rings = 0;
+	int moves = 0;
 	int max_discs = 64;
 
 	vector<int> A_Peg;
 	vector<int> B_Peg;
 	vector<int> C_Peg;
-
 
 	char Peg1_choice;
 	char Peg2_choice;
@@ -38,7 +38,12 @@ private:
 
 public:
 
+	// Pre-Condition: no parameters.
+	// Post-Condition: no return. Game start
 	void tower();
+
+	// Pre-Condition: parameters: const vector<int>& A_Peg, const vector<int>& B_Peg, const vector<int>& C_Peg
+	// Post-Condition: no return. This function updates the pegs
 	void updatePegs(const vector<int>& A_Peg, const vector<int>& B_Peg, const vector<int>& C_Peg);
 };
 
