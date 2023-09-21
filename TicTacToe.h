@@ -8,9 +8,9 @@
 static const int ROW_SIZE = 3;
 static const int COL_SIZE = 3;
 
-int inputInteger(std::string prompt, int startRange, int endRange);
-void mainMenu();
-char inputChar(std::string prompt, std::string options);
+int inputInteger(std::string prompt, int startRange, int endRange); // Gets user input. Uuser inputs the row and column number.
+void mainMenu(); // Main Menu 
+char inputChar(std::string prompt, std::string options); // Gets user choice, if the user wants to play again.
 
 class TicTacToe
 {
@@ -49,7 +49,7 @@ public:
 
 	// Pre-Condition: parameters: char playerSymbol &  int& moves used for the current player and keeping track of # of moves
 	// Post-Condition: no return. This is for the human to input their move.
-	void makeMove(char playerSymbol, int& moves);
+	const void makeMove(char playerSymbol, int& moves);
 
 	// Pre-Condition: no parameters
 	// Post-Condition: no return. Updates the board
@@ -57,7 +57,7 @@ public:
 
 	// Pre-Condition: parameters: char playerSymbol
 	// Post-Condition: returns a boolean. Checks for winner
-	bool checkWin(char playerSymbol);
+	const bool checkWin(char playerSymbol);
 
 	// Pre-Condition: no parameters
 	// Post-Condition: returns a boolean. Checks for draw
@@ -69,7 +69,7 @@ public:
 
 	// Pre-Condition: parameters: char playerSymbol. Takes in the computer move and randomizes the position.
 	// Post-Condition: no return
-	void computerMove(char playerSymbol);
+	const void computerMove(char playerSymbol);
 
 	// Pre-Condition: no parameters
 	// Post-Condition: no return. Resets the board to empty spaces.
@@ -77,5 +77,5 @@ public:
 
 	// Pre-Condition: parameters: double fastTime, int fastTimeMoves, double longTime, int longTimeMoves, double sum
 	// Post-Condition: no return. Provides game statistics.
-	void gameStatistics(double fastTime, int fastTimeMoves, double longTime, int longTimeMoves, double sum);
+	const void gameStatistics(double fastTime, int fastTimeMoves, double longTime, int longTimeMoves, double sum);
 };

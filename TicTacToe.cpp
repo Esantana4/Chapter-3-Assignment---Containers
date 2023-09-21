@@ -184,7 +184,7 @@ void TicTacToe::ticTacToe()
 
 // Pre-Condition: parameters: char playerSymbol &  int& moves used for the current player and keeping track of # of moves
 // Post-Condition: no return. This is for the human to input their move.
-void TicTacToe::makeMove(char playerSymbol, int& moves)
+const void TicTacToe::makeMove(char playerSymbol, int& moves)
 {
 	std::cout << "Human moves ...\n\n";
 
@@ -225,6 +225,29 @@ void TicTacToe::makeMove(char playerSymbol, int& moves)
 }
 
 // Pre-Condition: no parameters
+// Post-Condition: no return. Initializes the random number generator with a seed.
+void TicTacToe::initRandom()
+{
+	std::srand(static_cast<unsigned int>(std::time(nullptr)));
+}
+
+// Pre-Condition: parameters: char playerSymbol. Takes in the computer move and randomizes the position.
+// Post-Condition: no return
+const void TicTacToe::computerMove(char playerSymbol)
+{
+	int row, col;
+
+	do {
+		// Generate random row and column
+		row = std::rand() % ROW_SIZE;
+		col = std::rand() % COL_SIZE;
+	} while (boardUpdate[row][col] != ' '); // Keep generating until an empty spot is found
+
+	boardUpdate[row][col] = playerSymbol;
+
+}
+
+// Pre-Condition: no parameters
 // Post-Condition: no return. Updates the board
 void TicTacToe::updateBoard()
 {
@@ -252,7 +275,7 @@ void TicTacToe::updateBoard()
 
 // Pre-Condition: parameters: char playerSymbol
 // Post-Condition: returns a boolean. Checks for winner
-bool TicTacToe::checkWin(char playerSymbol)
+const bool TicTacToe::checkWin(char playerSymbol)
 {
 	// Check rows, columns, and diagonals for a win
 	for (int i = 0; i < ROW_SIZE; i++) {
@@ -292,28 +315,6 @@ bool TicTacToe::checkDraw()
 }
 
 // Pre-Condition: no parameters
-// Post-Condition: no return. Initializes the random number generator with a seed.
-void TicTacToe::initRandom()
-{
-	std::srand(static_cast<unsigned int>(std::time(nullptr)));
-}
-
-// Pre-Condition: parameters: char playerSymbol. Takes in the computer move and randomizes the position.
-// Post-Condition: no return
-void TicTacToe::computerMove(char playerSymbol)
-{
-	int row, col;
-	do {
-		// Generate random row and column
-		row = std::rand() % ROW_SIZE;
-		col = std::rand() % COL_SIZE;
-	} while (boardUpdate[row][col] != ' '); // Keep generating until an empty spot is found
-
-	boardUpdate[row][col] = playerSymbol;
-
-}
-
-// Pre-Condition: no parameters
 // Post-Condition: no return. Resets the board to empty spaces.
 void TicTacToe::resetBoard()
 {
@@ -326,7 +327,7 @@ void TicTacToe::resetBoard()
 
 // Pre-Condition: parameters: double fastTime, int fastTimeMoves, double longTime, int longTimeMoves, double sum
 // Post-Condition: no return. Provides game statistics.
-void TicTacToe::gameStatistics(double fastTime, int fastTimeMoves, double longTime, int longTimeMoves, double sum)
+const void TicTacToe::gameStatistics(double fastTime, int fastTimeMoves, double longTime, int longTimeMoves, double sum)
 {
 	double mean = 0;
 

@@ -16,8 +16,10 @@
  */
 
 #include "input.h"
-#include <iostream>
 #include "TicTacToe.h"
+//#include "TowerOfHanoi.h"
+#include "N_Queens.h"
+#include "test.h"
 
 using namespace std;
 
@@ -37,8 +39,9 @@ void mainMenu()
 {
     
     TicTacToe ticTacToeObject;
-
-
+    //TowerOfHanoi towerOfHanoi;
+    test test1;
+    N_Queens nQueensObject;
 
     cout << endl;
     cout << "\tCMPR131 - Chapter 3 Containers Assignment by Erik Santana (9 / 16 / 23)";
@@ -60,8 +63,8 @@ void mainMenu()
         {
         case 0: exit(1); break;
         case 1: system("cls"); ticTacToeObject.ticTacToe(); break;
-        case 2: system("cls"); break;
-        case 3: system("cls"); break;
+        case 2: system("cls"); test1.towerOfHanoi(); break;
+        case 3: system("cls"); nQueensObject.N_queens(); break;
 
         }
 
