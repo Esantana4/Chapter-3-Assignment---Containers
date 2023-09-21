@@ -17,9 +17,8 @@
 
 #include "input.h"
 #include "TicTacToe.h"
-//#include "TowerOfHanoi.h"
 #include "N_Queens.h"
-#include "test.h"
+#include "tower.h"
 
 using namespace std;
 
@@ -27,7 +26,6 @@ void mainMenu();
 
 int main()
 {
-
     mainMenu();
 
     return 0;
@@ -39,8 +37,7 @@ void mainMenu()
 {
     
     TicTacToe ticTacToeObject;
-    //TowerOfHanoi towerOfHanoi;
-    test test1;
+    Tower towerObject;
     N_Queens nQueensObject;
 
     cout << endl;
@@ -63,7 +60,7 @@ void mainMenu()
         {
         case 0: exit(1); break;
         case 1: system("cls"); ticTacToeObject.ticTacToe(); break;
-        case 2: system("cls"); test1.towerOfHanoi(); break;
+        case 2: system("cls"); towerObject.tower(); break;
         case 3: system("cls"); nQueensObject.N_queens(); break;
 
         }
