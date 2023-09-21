@@ -53,7 +53,17 @@ void Tower::tower()
 		do
 		{
 			Peg1_choice = inputChar("\n\tSelect the top disk from the start peg (A, B, C, or Q-quit): ", (static_cast<string>("ABCQ")));
+			if (Peg1_choice == 'Q' || Peg1_choice == 'q')
+			{
+				system("cls");
+				mainMenu();
+			}
 			Peg2_choice = inputChar("\tSelect the end peg (A, B, C, or Q-quit) to move the selected disk: ", (static_cast<string>("ABCQ")));
+			if (Peg2_choice == 'Q' || Peg2_choice == 'q')
+			{
+				system("cls");
+				mainMenu();
+			}
 			switch (toupper(Peg1_choice))
 			{
 			case 'A':
@@ -235,13 +245,7 @@ void Tower::tower()
 				}
 				break;
 			}
-			case 'Q':
-			{
-				if (toupper(Peg1_choice) == 'Q' || toupper(Peg2_choice) == 'Q')
-				{
-					return;
-				}
-			}
+
 			}
 
 			// Keep track of the moves

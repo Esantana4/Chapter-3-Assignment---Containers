@@ -6,13 +6,14 @@
 #include <map>
 #include <string>
 
-// Credit: Saul Merino& John Kim& Christian Hernandez - Tower Of Hanoi
+// Credit: Saul Merino& John Kim & Christian Hernandez - Tower Of Hanoi
 
 using namespace std;
 
 int inputInteger(string prompt, int start, bool greater);
 char inputChar(string prompt, string options);
 char inputChar(string prompt, char yes, char no);
+void mainMenu();
 
 class Tower
 {

@@ -341,3 +341,4 @@ const void TicTacToe::gameStatistics(double fastTime, int fastTimeMoves, double 
 	std::cout << std::fixed << std::setprecision(0) << "\tThe slowest time was " << longTime << " seconds in " << longTimeMoves << " moves.\n";
 	std::cout << std::fixed << std::setprecision(1) << "\tThe average time was " << mean << " second(s).\n\n";
 }
+
